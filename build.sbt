@@ -11,13 +11,12 @@ lazy val commonSettings = Seq(
   scalacOptions += "-Ywarn-value-discard",
   scalacOptions += "-Ywarn-infer-any",
   scalacOptions += "-Ywarn-dead-code",
-  resolvers += Resolver.typesafeRepo("releases"),
-  resolvers += Resolver.sonatypeRepo("releases"),
+//  resolvers += Resolver.typesafeRepo("releases"),
   resolvers += Resolver.sonatypeRepo("snapshots"),
   addCompilerPlugin("org.scalamacros" % "paradise" % "3.0.0-M4" cross CrossVersion.full),
-  libraryDependencies += "org.scalatest" % "scalatest_2.11" % "3.0.0-RC4",
-  coverageHighlighting := false,
-  coverageEnabled := true
+  libraryDependencies += "org.scalatest" % "scalatest_2.11" % "3.0.0-RC4"
+//  coverageHighlighting := false,
+//  coverageEnabled := true
 )
 
 // Macro setting is any module that has macros, or manipulates meta trees
